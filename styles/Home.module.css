@@ -1,0 +1,89 @@
+/* styles/Home.module.css */
+
+/* Rectangle component */
+.rectangle {
+  width: 400px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Box shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px); /* Optional: Adds blur effect behind the rectangle */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for visibility */
+}
+
+/* Flexbox container to center the rectangle */
+
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes up the full height */
+}
+.content {
+  display: flex;
+  justify-content: center;  /* Center content horizontally */
+  align-items: center;      /* Center content vertically */
+  flex: 1;                  /* This ensures content takes up remaining space */
+  height: 100%;             /* Make sure the content takes the full height of the viewport */
+}
+/* Title inside the rectangle */
+.title {
+  font-size: 24px;
+  color: white; /* White text for contrast */
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* For spinner positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: #45a049; /* Hover effect */
+}
+
+/* Spinner animation when loading */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Light grey border */
+  border-top: 4px solid white; /* White top for spinner */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite; /* Spinning animation */
+}
+
+/* Transparent Output Box */
+.output {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 18px;
+  color: white; /* Use white text for contrast on transparent background */
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  width: 100%;
+  word-wrap: break-word;
+}
+
+/* Spinner keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
