@@ -1,4 +1,4 @@
-export default function Rectangle({ solveBrawldle, output, loading }) {
+function Rectangle({ solveBrawldle, output, loading }) {
     return (
       <div style={styles.rectangle}>
         <h1 style={styles.title}>
@@ -96,3 +96,4 @@ export default function Rectangle({ solveBrawldle, output, loading }) {
       },
   };
   
+  export default Rectangle;
